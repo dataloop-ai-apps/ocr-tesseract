@@ -8,7 +8,7 @@
     "Provider": "Google",
     "Category": "Model",
     "License": "Apache 2.0",
-    "Task Type": "Image",
+    "Task Type": "Media Type",
     "Computer Vision": "OCR"
   },
   "codebase": {
