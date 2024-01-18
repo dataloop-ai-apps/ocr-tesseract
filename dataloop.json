@@ -71,7 +71,13 @@
         "scope": "project",
         "status": "trained",
         "configuration": {},
-        "description": "OCR model using tesseract"
+        "description": "OCR model using tesseract",
+        "supportedMethods": {
+          "load": true,
+          "predict": true,
+          "train": false,
+          "evaluate": false
+        }
       }
     ]
   }
