@@ -1,0 +1,114 @@
+{
+  "name": "ocr-tesseract",
+  "displayName": "OCR Tesseract",
+  "version": "0.0.1",
+  "scope": "public",
+  "description": "OCR model using tesseract",
+  "attributes": {
+    "Provider": "Google",
+    "Category": "Model",
+    "License": "Apache 2.0",
+    "Media Type": "Image",
+    "Computer Vision": "OCR"
+  },
+  "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/ocr-tesseract.git",
+    "gitTag": "0.0.1"
+  },
+
+  "components": {
+    "computeConfigs": [
+      {
+        "name": "ocr-tesseract-deploy",
+        "runtime": {
+          "podType": "regular-xs",
+          "concurrency": 1,
+          "runnerImage": "ludohor/py3.8:ocr-tesseract-us",
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 0,
+            "maxReplicas": 2
+          }
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "ocr-tesseract-module",
+        "entryPoint": "model_adapter.py",
+        "className": "TesseractAdapter",
+        "computeConfig": "ocr-tesseract-deploy",
+        "description": "OCR Tesseract Module",
+        "initInputs": [
+          {
+            "type": "Model",
+            "name": "model_entity"
+          }
+        ],
+        "functions": [
+          {
+            "name": "predict_items",
+            "input": [
+              {
+                "type": "Item[]",
+                "name": "items",
+                "description": "List of items to run inference on"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item[]",
+                "name": "items",
+                "description": "The same input images for prediction."
+              },
+              {
+                "type": "Annotation[]",
+                "name": "annotations",
+                "description": "The predicted annotations."
+              }
+            ],
+            "displayName": "Predict Items",
+            "displayIcon": "",
+            "description": "Function to run OCR-tesseract inference on items"
+          },
+          {
+            "name": "predict_dataset",
+            "input": [
+              {
+                "type": "Dataset",
+                "name": "dataset",
+                "description": ""
+              },
+              {
+                "type": "Json",
+                "name": "filters",
+                "description": "Dataloop Filter DQL"
+              }
+            ],
+            "output": [],
+            "displayName": "Predict Items",
+            "displayIcon": "",
+            "description": "Function to run OCR-tesseract inference on items"
+          }
+        ]
+      }
+    ],
+    "models": [
+      {
+        "name": "ocr-tesseract",
+        "moduleName": "ocr-tesseract-module",
+        "scope": "project",
+        "status": "trained",
+        "configuration": {},
+        "description": "OCR model using tesseract",
+        "supportedMethods": {
+          "load": true,
+          "predict": true,
+          "train": false,
+          "evaluate": false
+        }
+      }
+    ]
+  }
+}
