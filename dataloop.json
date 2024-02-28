@@ -24,7 +24,7 @@
         "runtime": {
           "podType": "regular-xs",
           "concurrency": 1,
-          "runnerImage": "ludohor/py3.8:ocr-tesseract-us",
+          "runnerImage": "gcr.io/viewo-g/piper/agent/runner/cpu/ocr-tesseract:0.3.0",
           "autoscaler": {
             "type": "rabbitmq",
             "minReplicas": 0,
