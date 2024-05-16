@@ -1,7 +1,7 @@
 {
   "name": "ocr-tesseract",
   "displayName": "OCR Tesseract",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scope": "public",
   "description": "OCR model using tesseract",
   "attributes": {
@@ -14,7 +14,7 @@
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/ocr-tesseract.git",
-    "gitTag": "0.0.2"
+    "gitTag": "0.0.3"
   },
 
   "components": {
