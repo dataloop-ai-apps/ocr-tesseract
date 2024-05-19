@@ -99,7 +99,7 @@
         "name": "ocr-tesseract",
         "moduleName": "ocr-tesseract-module",
         "scope": "project",
-        "status": "trained",
+        "status": "pre-trained",
         "configuration": {},
         "description": "OCR model using tesseract"
       }
