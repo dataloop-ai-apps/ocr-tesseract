@@ -91,21 +91,9 @@
             "displayIcon": "",
             "description": "Function to run OCR-tesseract inference on items"
           },
-        {
+          {
             "name": "evaluate_model",
             "input": [
-              {
-                "type": "Model",
-                "name": "model",
-                "description": "Dataloop Model Entity"
-              },
-              {
-                "type": "Dataset",
-                "name": "dataset",
-                "description": "Dataloop Dataset Entity"
-              }
-            ],
-            "output": [
               {
                 "type": "Model",
                 "name": "model",
@@ -119,7 +107,19 @@
               {
                 "type": "Json",
                 "name": "filters",
-                "description": "Filter to select items over which to run evaluation"
+                "description": "Dataloop Filter DQL"
+              }
+            ],
+            "output": [
+              {
+                "type": "Model",
+                "name": "model",
+                "description": "Dataloop Model Entity"
+              },
+              {
+                "type": "Dataset",
+                "name": "dataset",
+                "description": "Dataloop Dataset Entity"
               }
             ],
             "displayName": "Evaluate a Model",
