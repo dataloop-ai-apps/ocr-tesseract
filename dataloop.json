@@ -8,7 +8,9 @@
     "Provider": "Google",
     "Category": "Model",
     "License": "Apache 2.0",
-    "Media Type": "Image",
+    "Media Type": [
+      "Image"
+    ],
     "Computer Vision": "OCR",
     "Deployed By": "Dataloop"
   },
