@@ -9,7 +9,8 @@
     "Category": "Model",
     "License": "Apache 2.0",
     "Media Type": "Image",
-    "Computer Vision": "OCR"
+    "Computer Vision": "OCR",
+    "Deployed By": "Dataloop"
   },
   "codebase": {
     "type": "git",
