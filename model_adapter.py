@@ -5,8 +5,6 @@ import dtlpy as dl
 import os
 import logging
 
-dl.use_attributes_2(True)
-
 logger = logging.getLogger('tesseract-adapter')
 
 
