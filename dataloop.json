@@ -8,9 +8,7 @@
     "Provider": "Google",
     "Category": "Model",
     "License": "Apache 2.0",
-    "Media Type": [
-      "Image"
-    ],
+    "Media Type": ["Image"],
     "Computer Vision": "OCR",
     "Deployed By": "Dataloop"
   },
@@ -27,7 +25,7 @@
         "runtime": {
           "podType": "regular-xs",
           "concurrency": 1,
-          "runnerImage": "gcr.io/viewo-g/piper/agent/runner/cpu/ocr-tesseract:0.3.0",
+          "runnerImage": "gcr.io/viewo-g/piper/agent/cpu/ocr-tesseract:0.3.2",
           "autoscaler": {
             "type": "rabbitmq",
             "minReplicas": 0,
@@ -128,7 +126,8 @@
             "displayName": "Evaluate a Model",
             "displayIcon": "",
             "description": "Function to evaluate OCR-tesseract model performance"
-          }]
+          }
+        ]
       }
     ],
     "models": [
