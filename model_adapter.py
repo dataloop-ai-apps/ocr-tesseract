@@ -46,7 +46,8 @@ class TesseractAdapter(dl.BaseModelAdapter):
                         conf_ser = block['conf']
                         # filter only cong > 0
                         conf_ser = conf_ser[conf_ser > 0]
-                        logger.info("Block text:' {}'".format(block_text))
+                        sanitized_text = block_text.replace('\n', ' ').replace('\r', ' ').replace('\t', ' ')
+                        logger.info("Block text: '%s'", sanitized_text)
                         # Check if block_text is not an empty string
                         if block_text != "":
                             # Extract bounding box dimensions
