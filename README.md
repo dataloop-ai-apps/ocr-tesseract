@@ -3,11 +3,11 @@
 ## Introduction
 
 This repo is a model integration between [Google's Tesseract OCR Engine](https://github.com/madmaze/pytesseract)
-and [Dataloop](https://dataloop.ai/).
+and [DDOE](https://dataloop.ai/).
 
 Python-tesseract is an optical character recognition (OCR) tool for python.
 That is, it will recognize and "read" the text embedded in images. In this repo we implement the integration between Google's Tesseract OCR Engine
-model with our Dataloop platform.
+model with our DDOE platform.
 
 ## Requirements
 
@@ -16,7 +16,7 @@ model with our Dataloop platform.
 - Pillow==10.1.0
 - pandas==2.1.4
 - numpy==1.26.2
-- An account in the [Dataloop platform](https://console.dataloop.ai/)
+- An account in the [DDOE platform](https://console.dataloop.ai/)
 
 ## Installation
 
